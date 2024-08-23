@@ -1,0 +1,50 @@
+
+         .client1_txt {
+              font-family:GE Dinkum;font-size:20px;color:#DB9437;
+          }
+
+          .client2_txt {
+              font-family:GE Dinkum;font-size:18px;color:black;
+          }
+
+         .client3_txt {
+              font-family:GE Dinkum;font-size:18px;color:#444444;
+          }
+
+         .amount_frm {
+                      font-family: "Times New Roman", Times, serif;
+         }
+
+          .label1_txt {
+              font-family:GE Dinkum;font-size:20px;color:gray;
+          }
+
+         .client_btn {
+              font-family:GE Dinkum;font-size:18px;color:white;
+          }
+
+          .client_num {
+              font-family:Arial;font-size:16px;color:white;
+              text-align:center;
+          }
+
+
+          .txt_client {
+              font-family:GE Dinkum;font-size:26px;color:#444444;
+              background-color:#EAEAEA;
+              text-align:center;
+          }
+
+
+          .sidebar2_txt {  font-family:GE Dinkum;font-size:18px;color:black; }
+
+          .sidebar_active {   font-family:GE Dinkum;font-size:20px;color:#DB9437; }
+          .sidebar_notactive {   font-family:GE Dinkum;font-size:20px;color:black; }
+
+          .esidebar_active {   font-family:Arial;font-size:20px;color:#DB9437; }
+          .esidebar_notactive {   font-family:Arial;font-size:20px;color:black; }
+
+          .header_txt {  font-family:GE Dinkum;font-size:26px;color:black;}
+
+         .treeview_open {   background-color:#444444;  }
+         .treeview_close {   background-color:#E2E3E5; }

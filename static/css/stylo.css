@@ -1,0 +1,38 @@
+body {
+   font-family: GE Dinkum;
+}
+
+
+
+
+.tabs {
+    display: flex;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.tabs li {
+     padding:10px;
+     background-color: #f6f4f4;
+     border-right:1px solid white;
+     cursor: pointer;
+     transition: 0.2s;
+}
+
+.tabs li.active,
+.tabs li:hover {
+   background-color: #ddd;
+}
+
+.content_md {
+   background-color: #ddd;
+}
+
+.content_md > div {
+          padding: 20px;
+}
+
+.content_md > div:not(:first-child) {
+     display: none;
+}

@@ -1,0 +1,243 @@
+body {
+   font-family: GE Dinkum;
+}
+
+
+
+.slide-container{
+    position: relative;
+    width: 430px;
+    height: 530px;
+    border: 3px solid #ede6d6;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+}
+.slide-container .slides{
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}
+.slide-container .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.slide-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #b9abab;
+    background-color: #9c9482;
+    opacity: 0; 
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+span.next{
+    right: 10px;
+}
+span.prev{
+    left: 10px;
+}
+span.next:hover, span.prev:hover{
+    background-color: #9c9482;
+    /* opacity: 1; */
+    color: #111111;
+} 
+.dotsContainer{
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dotsContainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+.dotsContainer .active{
+    background-color: #555;
+}
+
+@keyframes next1{
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+.butimg {
+    margin-right:5px;
+    cursor: pointer;
+    padding:4px;
+    border: 1px solid #493f3f;
+}
+
+
+
+
+    .side-btn {
+        background-color: #B8AF9F;
+        border: none;
+        padding: 15px 32px;
+        border: 1px solid #B8AF9F;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+
+        
+        .side-btn:hover {
+            border: 1px solid #771717;
+        }
+
+.pprice {
+    font-size: 25px;
+    color: chocolate;
+}
+
+.wtxt{
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.details_txt{
+    ffont-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color:#771717;
+}
+
+.thstock {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    color:#181717;
+    background-color: rgb(210, 235, 220);
+    width: 47px;
+    border: 1px solid #771717;
+    text-align: center;
+}
+
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #ff0000;
+      color: #fff;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -10px; 
+  }
+
+   /* Add CSS styles for flex container and items */
+   .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row if necessary */
+    justify-content: space-between; /* Space items evenly along the main axis */
+    list-style: none; /* Remove list styles */
+    padding: 0;
+}
+
+.product-item {
+     
+    flex: 1; /* Grow to fill available space evenly */
+     /* Limit item width to avoid overcrowding */
+    margin: 10px; /* Add spacing between items */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style the "Buy Now" button */
+.buy-now-button {
+    display: block;
+    margin-top: 10px;
+    background-color: #00e1ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+.navlink.active{
+     color: red;
+}
+
+
+input[type='text'] { font-size: 16px; font-family: monospace; }
+
+     .dropdown-item {
+               font-family:GE Dinkum;font-size:22px;
+            }
+
+            .law_header {
+               font-family:GE Dinkum;font-size:28px;
+               text-align : center;
+            }
+
+              .my_table {
+               font-family:GE Dinkum;font-size:18px;
+            }
+
+           .my_text {
+               font-family:GE Dinkum;font-size:20px;
+            }
