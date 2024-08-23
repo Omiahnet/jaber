@@ -1,0 +1,210 @@
+{% extends 'admin/includes/base.html' %}
+
+
+{% block content %}
+<br><br><br>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+  <div class="container-fluid ">
+<!--   main Row      -->
+    <div class="row">
+ <!--   column number 1      -->
+    <div class="col-md-2">
+                <br><br><br>
+                  {% include "admin/sidebar/sidebar1.html" %}
+  </div>
+  <!--   end column number 1      -->
+
+<!--   column number 2      -->
+   <div class="col-md-10">
+      <div class="container">
+        <br>
+
+              <i class="fa fa-briefcase " style="font-size:26px;color:#DB9437"> 
+                <span style="font-size:20px;color:#DB9437;font-family:GE Dinkum;font-size:24px;">اضافة قضية جديده</span>  </i>
+
+            <hr>
+
+            <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+                <div class="row mb-3">
+
+                              <label for="client_id" class="col-sm-2 col-form-label-sm form_label" style="text-align:left"> الموكل</label>
+                              <div class="col-sm-2">
+                                   <select id="client_id" name="client_id" class="form-select form_label" aria-label="Default select example">
+                                           {% for  client in clients %}
+                                               <option  value="{{ client.client_id}}">{{ client.client_name}} </option>
+                                           {% endfor %}
+                                  </select>
+                              </div>
+                              <label for="client_type" class="col-sm-2 col-form-label-sm  form_label" style="text-align:left">تصنيف الموكل </label>
+                              <div class="col-sm-2">
+                                  <select id="client_type" name="client_type" class="form-select form_label" aria-label="Default select example">
+                                               <option  value="مدعي">مدعي</option>
+                                               <option  value="مدعى عليه">مدعى عليه</option>
+                                               <option  value="جاني">جاني</option>
+                                               <option  value="مجني عليه">مجني عليه</option>
+                                 </select>
+                              </div>
+                    </div><hr>
+
+
+                 <div class="row mb-3">
+
+                          <label for="opponent_name" class="  col-sm-2 col-form-label-sm form_label" style="text-align:left">اسم الخصم</label>
+                          <div class="col-sm-2">
+                                 <input type="text" name="opponent_name"  id="opponent_name"  style="width:250px">
+                        </div>
+                              <label for="opponent_address" class="col-sm-2 col-form-label-sm form_label" style="text-align:left"> عنوان الخصم</label>
+                              <div class="col-sm-2">
+                                 <input   type="text" name="opponent_address"  id="opponent_address"  style="width:400px">
+                        </div>
+                    </div>
+
+                     <div class="row mb-3">
+
+                          <label for="opponent_lawyername" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">محامي الخصم</label>
+                          <div class="col-sm-2">
+                                 <select id="opponent_lawyername" name="opponent_lawyername" class="form-select form_label" aria-label="Default select example">
+                                               <option  value="محامي الخصم 1">محامي الخصم 1</option>
+                                               <option  value="محامي الخصم 2">محامي الخصم 2 </option>
+                                               <option  value="محامي الخصم 3">محامي الخصم 3</option>
+                                               <option  value="محامي الخصم 4">محامي الخصم 4</option>
+                                               <option  value="محامي الخصم 5">محامي الخصم 5</option>
+                                 </select>
+                        </div>
+                              <label for="opponent_lawyerphone" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">هاتف محامي الخصم</label>
+                              <div class="col-sm-2">
+                                 <input type="text" name="opponent_lawyerphone"  id="opponent_lawyerphone" >
+                        </div>
+                    </div><hr>
+
+
+
+                <input type="hidden" name="case_id" value="{{case_no}}">
+                <input type="hidden" name="case_number" value="{{case_number2}}">
+
+
+                 <div class="row mb-3">
+
+                               <label for="case_type" class="col-sm-2 col-form-label-sm  form_label" style="text-align:left">تصنيف القضية</label>
+                               <div class="col-sm-2">
+                                              <select id="case_type" name="case_type" class="form-select form_label" aria-label="Default select example">
+                                               <option  value="مدني">مدني</option>
+                                              <option  value="شرعي">شرعي</option>
+                                               <option  value="جنائي">جنائي</option>
+                                               <option  value="جنح">جنح</option>
+                                               <option  value="تجاري">تجاري</option>
+                                            </select>
+                                </div>
+                                  <label for="case_type" class="col-sm-2 col-form-label-sm  form_label" style="text-align:left">حالة القضية</label>
+                          <div class="col-sm-2">
+                                  <select id="case_status" name="case_status" class="form-select form_label" aria-label="Default select example">
+                                   <option  value="تحت الدراسة">تحت الدراسة</option>
+                                   <option  value="منتهية">منتهية</option>
+                                   <option  value="معلقة">معلقة</option>
+                                   <option  value="مستانفه">مستانفه</option>
+                                   <option  value="مرفوضه">مرفوضه</option>
+                                </select>
+                        </div>
+                          <label for="case_level" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">مرحلة التقاضي</label>
+                          <div class="col-sm-2">
+                                 <select id="case_level" name="case_level" class="form-select form_label" aria-label="Default select example">
+                                   <option  value="نقض">نقض</option>
+                                   <option  value="جزئي ">جزئي</option>
+                                   <option  value="استئناف">استئناف</option>
+                                   <option  value="ابتدائي">ابتدائي</option>
+                                </select>
+                       </div>
+                     </div>
+
+
+
+
+
+
+
+
+               <div class="row mb-3">
+                          <label for="case_description" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">موضوع القضية</label>
+                          <div class="col-sm-2">
+                               <input type="text" name="case_description"  id="case_description"  >
+                        </div>
+                        <label for="date_opened" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">تاريخ القضية</label>
+                          <div class="col-sm-2">
+                                 <input type="date" name="date_opened"  id="date_opened"  >
+                        </div>
+                      <label for="case_id4court" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">رقم القضية في المحكمة </label>
+                          <div class="col-sm-2">
+                                 <input type="text" name="case_id4court"  id="case_id4court"  >
+                       </div>
+
+
+
+
+                </div>
+
+
+
+                   <div class="row mb-3">
+                       <label for="lawyer_id" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">محامي القضية</label>
+                          <div class="col-sm-2">
+                                  <select id="lawyer_id" name="lawyer_id" class="form-select form_label" aria-label="Default select example">
+                                         {% for lawyers in all_lawyers %}
+                                         <option  value={{ lawyers.lawyer_id}}>{{ lawyers.name}}</option>
+                                         {% endfor %}
+                                </select>
+
+
+                        </div>
+                       <label for="court_name" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">المحكمة</label>
+                          <div class="col-sm-2">
+                                 <input type="text" name="court_name"  id="court_name"  >
+                        </div>
+                       <label for="police_center" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">مركز الامن</label>
+                          <div class="col-sm-2">
+                                 <input type="text" name="police_center"  id="police_center"  >
+                        </div>
+
+                  </div>
+
+
+
+
+                <hr>
+
+
+             <div class="row mb-3">
+                          <label for="contract_date" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">تاريخ كتابة العقد</label>
+                          <div class="col-sm-2">
+                                 <input type="date" name="contract_date"  id="contract_date"  >
+                        </div>
+                        <label for="contract_amount" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">مبلغ القضية</label>
+                          <div class="col-sm-2">
+                                 <input type="text" name="contract_amount"  id="contract_amount"  >
+                        </div>
+                 </div>
+              <div class="row mb-3">
+                          <label for="contract_terms" class="col-sm-2 col-form-label-sm form_label" style="text-align:left">بنود العقد</label>
+                          <div class="col-sm-8">
+                                 <textarea class="form-control" id="contract_terms" name="contract_terms" rows="4"></textarea>
+                        </div>
+            </div>
+
+
+              <div class="row mb-3">
+                       <div class="col-sm-6 mb-3"><hr>
+                                 <button type="reset" class="btn system_btn  form_button  ">اضافة قضية جديدة</button>
+                                 <button type="reset" class="btn system_btn  form_button " value="Reset">الغاء عملية الاضافة </button>
+                        <hr></div><hr>
+                    </div>
+
+
+  </form>
+  </div>
+</div>
+
+
+{% endblock %}

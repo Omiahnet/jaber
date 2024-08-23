@@ -1,0 +1,56 @@
+{% extends 'admin/includes/base.html' %}
+
+
+{% block content %}
+<br> <br> <br>
+  {% load static %}
+
+<style>
+
+  
+
+    .number_intable {
+        text-align:center;font-family:Arial;font-size:18px;
+    }
+
+    .ahmad_cont {
+        background-image: url('/static/dist/img/payment1.png'); /* Path to your background image */
+        background-size: cover; /* Ensures the image covers the entire container */
+        background-position: center; /* Centers the image */
+        padding: 20px;
+        border-radius: 8px;
+        width: 800px;
+        height: 580px;
+        margin: 0 auto;
+    }
+
+    .payments_txt {
+        font-family:GE Dinkum;font-size:23px;color:#203864;
+    }
+
+</style>  
+  
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+ 
+       <div class="container">        
+            
+             
+        <br>
+   <div class="ahmad_cont"> 
+       <br><br><br><br><br><br><br>
+    {% for pay in payments %}
+        <h3 class="payments_txt" style="padding-right:80px;padding-top:32px"> {{ pay.amount }} </h3>
+        <h3 class="payments_txt" style="padding-right:150px;padding-top:8px"> {{ clients_name }} </h3>
+        <h3 class="payments_txt" style="padding-right:150px;padding-top:74px"> {{ pay.description }} </h3>
+    {% endfor %}
+   </div> 
+  
+     
+
+ </div>
+ 
+
+
+
+{% endblock %}

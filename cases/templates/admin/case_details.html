@@ -1,0 +1,328 @@
+{% extends 'admin/includes/base.html' %}
+
+
+{% block content %}
+
+<br>
+  {% load static %}
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+
+  <div class="container-fluid ">
+
+
+             <div class="container">
+
+              <h5 class="case_details">  تفاصيل القضية</h5>
+
+            
+
+            <style>
+                table {
+                         border: solid 1px black;
+                         width : 100%;
+                         font-family:GE Dinkum;                     
+                         background-color:rgba(173,216,230,0.3);                     
+                  }
+    
+                  thead {
+                         border: solid 2px black;
+                         text-align:center;
+                         background:  rgba(127,179,213,0.4);
+                         color: black;
+                         font-size:22px;
+                  }
+                    td {
+                         border: solid 1px black;
+                         font-size:20px;
+                         text-align:center;
+                  }
+    
+                   .number_intable {
+                     text-align:center;font-family:Arial;font-size:18px;
+               }
+
+               .case_details {
+                font-size:22px;
+                border: solid 1px #28576D;
+                font-family:GE Dinkum;color:black;
+                background-color:rgba(127,179,213,0.4);
+                text-align:center;
+               }
+
+             .nav-tabsy:hover {
+                background-color: green;
+             }  
+          
+
+
+           .part1_txt {                 
+               margin-left:5px;margin-right:5px; 
+               font-family:GE Dinkum;  font-size: 20px;                     
+               color:gray;  
+            } 
+
+            .part2_txt { 
+              margin-left:5px;margin-right:5px; 
+               font-family:GE Dinkum; font-size: 20px;                    
+               color:black; 
+
+            }
+           
+
+             
+    
+           </style>
+<!--       tab  00000000000000000-->
+<hr>
+<div class="m-4  " style="background-color:white">
+                    <ul class="nav nav-tabs tabs">
+                              <li class="nav-item nav-tabsy   active  text-dark" data-cont=".one1">
+                                      <span style="font-family: GE Dinkum;font-size:20px;color:gray">البيانات التفصيلية للقضية</span>
+                              </li>
+                              <li class="nav-item text-dark" data-cont=".one2" style="font-family:Arial">
+                                <span style="font-family: GE Dinkum;font-size:20px;color:gray">وثائق القضية</span>
+                              </li>
+                              <li class="nav-item text-dark" data-cont=".one3">
+                                <span style="font-family: GE Dinkum;font-size:20px;color:gray">جلسات القضية</span>
+                              </li>
+                             <li class="nav-item  text-dark" data-cont=".one4">
+                              <span style="font-family: GE Dinkum;font-size:20px;color:gray">صحائف الدعوى والادلة</span>
+                              </li>
+
+                            <li class="nav-item text-dark" data-cont=".one5">
+                              <span style="font-family: GE Dinkum;font-size:20px;color:gray">المدفوعات المالية الخاصة بالقضية</span>
+                                    
+                            </li>
+              </ul>
+</div>
+<hr>
+ <div class="content_md">
+       <div class="one1" style="background-color:#F4F5F6">
+             
+             
+                             <h5><span class="part1_txt">رقم القضية: </span><span class="part2_txt"> case_01</span>
+                              <span class="part1_txt">رقم القضية في المحكمة: </span><span class="part2_txt"> 14554433 </span>
+                             </h5>
+                              
+                             <h5><span class="part1_txt">نوع المحكمة : </span><span class="part2_txt">جزائية </span></h5>
+                             <h5><span class="part1_txt">اسم المحكمة: </span><span class="part2_txt">محكمة جزاء عمان </span></h5>
+                             <h5><span class="part1_txt">المحامي : </span><span class="part2_txt">محامي مكتب رقم 1 </span></h5>
+                             <h5><span class="part1_txt">تفاصيل القضية : </span><span class="part2_txt">خلاف على شراء قطعة ارض مشاع </span> </h5><hr>
+
+                             <div class="row">
+                                 <div   class="col md-5">
+                                              <h5 class="case_details">  بيانات الموكل</h5><hr>
+                                              <h5><span class="part1_txt">اسم الموكل:</span ><span class="part2_txt">سميرعادل سمير</span></h5>
+                                              <h5 class="part3_txt"> <span class="part1_txt">الهاتف : </span ><span class="part2_txt">0781111111</span>  </h5>
+                                              <h5><span class="part1_txt">الجنسية : </span ><span class="part2_txt">الاردنية</h5>
+                                              <h5 style="font-size:22px;font-family:GE Dinkum"><span class="part1_txt"> البريد الاكتروني : </span ><span class="part2_txt">client1@gmail.com</span>  </h5>
+                                              <h5 style="font-size:22px;font-family:GE Dinkum">  <span class="part1_txt">العنوان: </span ><span class="part2_txt"> حبل الحسين </span> </h5>
+                                 </div>
+                                 <div class="col md-5" style="background-color:#F4F5F6">
+                                               <h5 class="case_details">  بيانات الخصم</h5><hr>
+                                               <h5><span class="part1_txt">اسم الخصم : </span ><span class="part2_txt">خصم رقم 1</span></h5>
+                                              <h5>  <span class="part1_txt">العنوان: </span ><span class="part2_txt"> : عمان خلدا</span></h5>
+                                              <h5>  <span class="part1_txt">محامي الخصم : </span ><span class="part2_txt"> : محامي خصم رقم 1</span></h5>
+                                              <h5>  <span class="part1_txt">هاتف محامي الخصم :  </span ><span class="part2_txt"> : 0781154111</span></h5>
+
+                                 </div>
+                             </div>
+
+
+              
+       </div>
+       <div class="one2" style="background-color:#F4F5F6">
+
+           <table>
+                  <thead >
+
+                    <td> </td>
+                    <td >رقم الوثيقة</td>
+                     <td >عنوان الوثيقة</td>
+                    <td >نوع الوثيقة</td>
+                    <td >تاريخ التحميل</td>
+                    <td >صورة الوثيقة</td>
+                    <td >العمليات</td>
+                  </thead>
+                      {% load static %}
+              
+                  <tr >
+                    <td style="text-align:center;"><i class="fas fa-folder-open nav-icon text-secondary" ></i></td>
+                    <td  style="text-align:center;" class="jaber_txt">11</td>
+                    <td class="jaber2_txt">عقد شراء ارض</td>
+                    <td  class="jaber2_txt">عقود</tdv>
+                    <td  class="jaber2_txt">05-05-2024</td>
+                    <td class="jaber2_txt"><img class="doc_image"  src="{% static 'dist/img/document1.jpg' %}"></td>
+                    <td class="jaber2_txt"> <button type="button" class="btn system_btn ">تفاصيل الوثيقة</button> </td>
+
+           </tr>
+                
+            </table>
+     </div>
+       <div class="one3" style="background-color:#F4F5F6">
+           <table class="table table-primary custom-table table-striped table-bordered table-sm  my_table">
+                  <thead >
+
+                    <td></td>
+
+                    <td>رقم الجلسة</td>
+                    <td>عنوان الجلسة</td>
+                    <td>تاريخ الجلسة</td>
+                    <td>المحامي المعين</td>
+                    <td>القاضي</td>
+                    <td>مكان الجلسة</td>
+                    <td>الحالة القضائية</td>
+                     <td style="text-align:center;">العمليات</td>
+                  </thead>
+
+
+            {% for session in sessions %}
+                <tr class="table-light">
+
+                <td style="text-align:center;"><i class="fas fa-gavel nav-icon text-secondary"></i></td>
+
+
+               <td>{{session.session_id}} </td>
+               <td>{{session.session_title }}</td>
+                <td class="client_num">{{session.session_date}}</td>
+                <td>{{session.lawyer}}</td>
+                <td>{{session.judge}}</td>
+                <td>{{session.courtroom}}</td>
+                <td>{{session.is_open}}</td>
+                 <td  class="jaber2_txt">
+                       <button type="button" class="btn system_btn">تفاصيل الجلسة</button>
+                </td>
+
+           </tr>
+                {% endfor %}
+            </table>
+
+       </div>
+       <div class="one4" style="background-color:#F4F5F6">
+           <table class="table table-primary  table-striped table-bordered table-sm  my_table">
+                  <thead >
+
+                    <td></td>
+                    <td class="jaber2_txt" style="text-align:center;">رقم الملاحظة</td>
+                    <td class="jaber2_txt" style="text-align:center;">تاريخ الملاحظة</td>
+                    <td class="jaber2_txt">الملاحظة</td>
+
+                     <td class="jaber2_txt" style="text-align:center;">العمليات</td>
+                  </thead>
+
+
+            {% for notes in notes %}
+                <tr class="table-light">
+
+                <td style="text-align:center;"><i class="fa fa-calculator nav-icon text-secondary"></i></td>
+
+                <td class="jaber_txt" style="text-align:center;">{{notes.note_id}} </td>
+                <td  class="jaber2_txt" style="text-align:center;">{{notes.note_date}}</td>
+                <td  class="jaber2_txt">{{notes.note_text}}</td>
+                <td  class="jaber2_txt">
+                       <button type="button" class="btn system_btn">تفاصيل الملاحظة</button>
+                       <button type="button" class="btn system_btn">تعديل</button>
+                      <button type="button" class="btn system_btn">حذف</button>
+                </td>
+
+           </tr>
+                {% endfor %}
+            </table>
+
+
+       </div>
+
+     <div class="one5" style="background-color:#F4F5F6">
+             <div class="row">
+           <!-- start Col 1 -->
+          <div class="col-lg-3 col-6">   <!-- small box -->    <div class="small-box " style="background-color:#2F6881">    <div class="inner">
+                <h4 style="font-family:GE Dinkum;font-size:35px;color:#DB9437;">4600.00</h4>
+                <h5 style="font-family:GE Dinkum;font-size:22px;color:white;">مبلغ القضية كاملا </h5>
+              </div>
+              <div class="icon">
+                <i class="fa fa-briefcase"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- end Col 1 -->
+                 <!-- start Col 1 -->
+          <div class="col-lg-3 col-6">   <!-- small box -->    <div class="small-box " style="background-color:#2F6881">    <div class="inner">
+                <h4 style="font-family:GE Dinkum;font-size:35px;color:#DB9437;">3800.00 </h4>
+                <h5 style="font-family:GE Dinkum;font-size:22px;color:white;">مجموع الدفعات</h5>
+              </div>
+              <div class="icon">
+                <i class="fa fa-briefcase"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- end Col 1 -->
+                 <!-- start Col 1 -->
+          <div class="col-lg-3 col-6">   <!-- small box -->    <div class="small-box " style="background-color:#2F6881">    <div class="inner">
+                <h4 style="font-family:GE Dinkum;font-size:35px;color:#DB9437;">800.00</h4>
+                <h5 style="font-family:GE Dinkum;font-size:22px;color:white;">المبلغ المتبقي </h5>
+              </div>
+              <div class="icon">
+                <i class="fa fa-briefcase"></i>
+              </div>
+
+            </div>
+          </div>
+          <!-- end Col 1 -->
+                 </div>  <!-- end Row -->
+              <hr>
+              <table>
+                  <thead >
+                    <tr>
+                    <td></td>
+
+                    <td>تاريخ الدفعة</td>
+                    <td>رقم سند القبض</td>
+                    <td>المبلغ المدفوع</td>
+                    <td> ملاحظة</td>
+
+                     <td>العمليات</td>
+                     <tr>
+                  </thead>
+
+
+             
+                <tr>
+                    <td><i class="fa fa-calculator nav-icon text-secondary"></i></td>
+                    <td>11-07-2024</td><td>100</td><td> 2000.00 </td><td> دفعة مالية ثالثة من اتعاب القضية</td>
+                    <td>                     
+                          <a class="btn system3_btn btn-sm btn-outline-dark" href="{% url 'cases:pay_details1'   %}"> سند القبض</a>                                                                        
+                                                
+                    </td>
+               </tr>
+
+               <tr>
+                <td><i class="fa fa-calculator nav-icon text-secondary"></i></td>
+                <td>10-06-2024</td><td>102</td><td> 1000.00 </td><td> دفعة مالية ثانية من اتعاب القضية</td>
+                <td>                     
+                      <a class="btn system_btn btn-sm btn-outline-dark" href="#">  سند القبض</a>                                                                        
+                                          
+                </td>
+           </tr>
+
+
+           <tr>
+            <td><i class="fa fa-calculator nav-icon text-secondary"></i></td>
+            <td>21-05-2024</td><td>123</td><td> 800.00 </td><td> دفعة مالية اولى من اتعاب القضية</td>
+            <td>                     
+                  <a class="btn system_btn btn-sm btn-outline-dark" href="#"> سند القبض</a>                                                                        
+                                        
+            </td>
+       </tr>
+                 
+            </table>
+     </div>
+ </div>
+
+
+
+
+
+{% endblock %}

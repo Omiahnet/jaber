@@ -1,0 +1,125 @@
+{% extends 'admin/includes/base.html' %}
+
+
+{% block content %}
+<br> <br> <br>
+  {% load static %}
+
+  <style>
+    table {
+             border: solid 1px black;
+             width : 100%;
+             font-family:GE Dinkum;                     
+             background-color:rgba(173,216,230,0.3);                     
+      }
+
+      thead {
+             border: solid 2px black;
+             text-align:center;
+             background:  rgba(127,179,213,0.4);
+             color: black;
+             font-size:22px;
+      }
+        td {
+             border: solid 1px black;
+             font-size:20px;
+             text-align:center;
+      }
+
+       .number_intable {
+         text-align:center;font-family:Arial;font-size:18px;
+   }
+
+   .case_details {
+    font-size:22px;
+    border: solid 1px #28576D;
+    font-family:GE Dinkum;color:black;
+    background-color:rgba(127,179,213,0.4);
+    text-align:center;
+   }
+
+ .nav-tabsy:hover {
+    background-color: green;
+ }  
+
+
+
+.part1_txt {                 
+   margin-left:5px;margin-right:5px; 
+   font-family:GE Dinkum;  font-size: 20px;                     
+   color:gray;  
+} 
+
+.part2_txt { 
+  margin-left:5px;margin-right:5px; 
+   font-family:GE Dinkum; font-size: 20px;                    
+   color:black; 
+
+}
+
+
+ 
+
+</style>  
+  
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+ 
+       <div class="container">        
+            
+             
+        
+        <h3 class="law_header">كشف بكافة المبالغ المقبوضة</h3><hr>
+
+
+<table>
+    <thead >
+      <tr>
+      <td></td>
+
+      <td>تاريخ الدفعة</td>
+      <td>رقم سند القبض</td>
+      <td>المبلغ المدفوع</td>
+      <td>رقم القضية</td>
+      <td> ملاحظة</td>
+
+       <td>العمليات</td>
+       <tr>
+    </thead>
+
+    <tr>
+      <td><i class="fa fa-calculator nav-icon text-secondary"></i></td>
+      <td>11-07-2024</td><td>100</td><td> 2000.00 </td> <td> case_01 </td> <td> دفعة مالية ثالثة من اتعاب القضية</td>
+      <td>                     
+            <a class="btn system3_btn btn-sm btn-outline-dark" href="{% url 'cases:pay_details1'   %}"> سند القبض</a>                                                                        
+                                  
+      </td>
+ </tr>
+
+ <tr>
+  <td><i class="fa fa-calculator nav-icon text-secondary"></i></td>
+  <td>10-06-2024</td><td>102</td><td> 1000.00 </td><td> case_01 </td><td> دفعة مالية ثانية من اتعاب القضية</td>
+  <td>                     
+        <a class="btn system_btn btn-sm btn-outline-dark" href="#">  سند القبض</a>                                                                        
+                            
+  </td>
+</tr>
+
+
+<tr>
+<td><i class="fa fa-calculator nav-icon text-secondary"></i></td>
+<td>21-05-2024</td><td>123</td><td> 800.00 </td><td> case_01 </td><td> دفعة مالية اولى من اتعاب القضية</td>
+<td>                     
+    <a class="btn system_btn btn-sm btn-outline-dark" href="#"> سند القبض</a>                                                                        
+                          
+</td>
+</tr>
+</table>
+
+
+</div>
+ 
+
+
+
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'admin/includes/base.html' %}
+
+
+{% block content %}
+<br> <br> <br>
+  {% load static %}
+
+  <style>
+    table {
+             border: solid 1px gray;
+             width : 100%;
+             font-family:GE Dinkum;                     
+             background-color:rgba(173,216,230,0.3);                     
+      }
+
+      thead {
+             border: solid 2px gray;
+             text-align:center;
+             background:  #444444;
+             color: #DB9437;
+             font-size:22px;
+      }
+        td {
+             border: solid 1px gray;
+             font-size:20px;
+             text-align:center;
+      }
+
+       .number_intable {
+         text-align:center;font-family:Arial;font-size:18px;
+   }
+
+</style>  
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+  <div class="container-fluid ">
+<!--   main Row      -->
+    <div class="row">
+ <!--   column number 1      -->
+    <div class="col-md-2">
+                  <br>
+                <div style="text-align:center">
+          <a class="navbar-brand" href="{% url 'cases:index' %}">
+           {% load static %}
+          <img src="{% static 'dist/img/logo.png' %}" alt="Logo" style="height: 130px;"> </a>
+    </div>
+                   {% include "admin/sidebar/sidebar1.html" %}
+  </div>
+  <!--   end column number 1      -->
+
+<!--   column number 2      -->
+   <div class="col-md-10">
+      <div class="container">
+
+           <br>
+          <div class="row p-2 bg-light">
+               <p  class="txt_client">كشف باسماء كافة المحاميين</p>
+            <hr>
+
+              
+            <div id="client_report">
+            <table>
+                  <thead >
+
+                    <td></td>
+                    <td>رقم المحامي</td>
+                    <td>اسم المحامي</td>
+                    <td>عدد القضايا</td>                 
+                    <td>العنوان</td>
+                    <td>الهاتف</td>
+
+                     <td style="color:#DB9437;text-align:center" class="client2_txt">العمليات</td>
+                  </thead>
+
+                  
+            {% for lawyer in all_lawyers %}
+                <tr >
+
+                <td><i class="far fa-user nav-icon text-secondary"></i></td>
+
+               <td>{{lawyer.lawyer_id}} </td>
+               <td style="text-align:right">{{lawyer.lawyer_name}} </td>
+               <td>{{ lawyer.num_cases }}</td>                 
+               <td  style="text-align:right">{{lawyer.address}} </td>
+               <td>{{lawyer.contact}} </td>
+
+               {% if lawyer.lawyer_id == '01' %}                   
+                   <td >
+                       <a href="{% url 'cases:lawyer_cases' %}"> <button  type="button" class="btn  btn-sm client_btn btn-success ">قضايا المحامي</button></a>
+               {% else %}        
+                   <td >
+                   <button  type="button" class="btn  btn-sm client_btn btn-secondary ">قضايا المحامي</button> 
+               {% endif %}
+                       
+
+                </td>
+
+           </tr>
+                {% endfor %}
+            </table>
+        </div>
+   </div>
+</div>
+ </div>
+
+
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends 'admin/includes/base.html' %}
+
+
+{% block content %}
+
+  {% load static %}
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+          <br> <br> <br>
+
+          <style>
+            table {
+                     border: solid 1px gray;
+                     width : 100%;
+                     font-family:GE Dinkum;                     
+                     background-color:rgba(173,216,230,0.3);                     
+              }
+        
+              thead {
+                     border: solid 2px gray;
+                     text-align:center;
+                     background:  #444444;
+                     color: #DB9437;
+                     font-size:22px;
+              }
+                td {
+                     border: solid 1px gray;
+                     font-size:20px;
+                     text-align:center;
+              }
+        
+               .number_intable {
+                 text-align:center;font-family:Arial;font-size:18px;
+           }
+        
+        </style>  
+
+
+  <div class="container-fluid ">
+<!--   main Row      -->
+    <div class="row">
+ <!--   column number 1      -->
+    <div class="col-md-2">
+                <br>
+         <div style="text-align:center">
+          <a class="navbar-brand" href="{% url 'cases:index' %}">
+           {% load static %}
+          <img src="{% static 'dist/img/logo.png' %}" alt="Logo" style="height: 130px;"> </a>
+    </div>
+                   {% include "admin/sidebar/sidebar1.html" %}
+  </div>
+  <!--   end column number 1      -->
+
+<!--   column number 2      -->
+   <div class="col-md-10">
+       <div class="container">
+
+          <div class="row p-3 bg-light">
+            <p  class="txt_client">كشف بكافة القضايا</p>
+             
+                                   <hr>
+
+<!--       table                       -->
+            <table >
+                  <thead >
+
+
+                          <td>رقم القضية</td>
+
+                    
+                    <td >اسم الموكل</td>
+                    <td >نوع الموكل</td>
+                    <td >هاتف الموكل</td>
+                    <td >محامي القضية</td>                    
+                    <td >مبلغ القضية</td>
+                    <td >المدفوع</td>
+                    <td >المتبقي</td>                     
+                    <td >العمليات</td>
+                  </thead>
+
+
+            {% for case in client_cases %}
+               <tr >
+              <td >{{case.case_id}} </td>
+
+
+                <td >{{case.client_name}}</td>
+                 
+                <td >{{case.client_type}}</td>
+                <td >{{case.contact}}</td>
+                <td >{{case.case_lawyer}}</td>                
+                <td style="font-size:23px;color:#DB9437;text-align:center"  > {{case.amm1}}  </td>
+                <td style="font-size:23px;color:#DB9437;text-align:center"  >  {{ case.amm2 }}   </td>
+
+
+               <td style="font-size:23px;color:#DB9437;text-align:center"  >  {{ case.amm3 }} </td>
+
+               {% if case.case_id == 'case_01' %}    
+                      <td>
+                            {% comment %} {% url 'cases:case_details'  case.case_id %} {% endcomment %}
+                            <a href="{% url 'cases:case_details'  %}">
+                            <button type="button" class="btn btn-success btn-sm jaber_btn">تفاصيل القضية</button></a>
+                          
+                      </td>
+                {% else %} 
+                      <td>
+                        {% comment %} {% url 'cases:case_details'  case.case_id %} {% endcomment %}
+                        <a href="#">
+                          <button type="button" class="btn btn-secondary btn-sm jaber_btn">تفاصيل القضية</button></a>
+                      
+                        </td>
+
+                {% endif %}
+
+           </tr>
+                {% endfor %}
+            </table>
+ <!--       table                       -->
+
+
+
+
+<!--   end column number 2      -->
+   </div>
+<!--   end Row      -->
+    </div>
+
+
+</div>
+
+<br><br>
+
+{% endblock %}

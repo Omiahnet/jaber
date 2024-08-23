@@ -1,0 +1,163 @@
+{% extends 'admin/includes/base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+          <br> <br> <br>
+
+
+
+
+  <div class="container-fluid ">
+<!--   main Row      -->
+    <div class="row">
+ <!--   column number 1      -->
+    <div class="col-md-2">
+                <br>
+     <div style="text-align:center">
+          <a class="navbar-brand" href="{% url 'cases:index' %}">
+           {% load static %}
+          <img src="{% static 'dist/img/logo.png' %}" alt="Logo" style="height: 130px;"> </a>
+    </div>
+                  {% include "admin/sidebar/sidebar1.html" %}
+  </div>
+  <!--   end column number 1      -->
+
+<!--   column number 2      -->
+   <div class="col-md-10">
+          <div class="row p-3 bg-light">
+                <div class="container-fluid">
+
+   <div class="row p-3 bg-light">
+
+
+<!-- Main content -->
+<section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box  " style="background-color:#A28867;color:white">
+              <div class="inner">
+                <h3 >2</h3>
+
+                <h5 class="dash_board">قضايا الحقوق المنظورة</h5>
+              </div>
+              <div class="icon">
+                <i class="fas  fa-users"></i>
+              </div>
+              <a href="#" class="small-box-footer">التفاصيل <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>1<sup style="font-size: 20px"> </sup></h3>
+
+               <h5 class="dash_board"> قضايا الحقوق المفصولة</h5>
+              </div>
+              <div class="icon">
+                <i class=" fas fa-gavel"></i>
+              </div>
+              <a href="#" class="small-box-footer">التفاصيل <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box  " style="background-color:#A28867;color:white">
+              <div class="inner">
+                <h3>1</h3>
+
+
+                  <h5 class="dash_board">قضايا الجزاء المنظورة</h5>
+              </div>
+              <div class="icon">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <a href="#" class="small-box-footer">التفاصيل <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>0</h3>
+
+
+                  <h5 class="dash_board">قضايا الجزاء المفصولة</h5>
+              </div>
+              <div class="icon">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <a href="#" class="small-box-footer">التفاصيل <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box  " style="background-color:#A28867;color:white">
+              <div class="inner">
+                <h3>1</h3>
+
+
+                  <h5 class="dash_board">قضايا التنفيذ المنظورة</h5>
+              </div>
+              <div class="icon">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <a href="#" class="small-box-footer">التفاصيل <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3>0</h3>
+
+                  <h5 class="dash_board">قضايا التنفيذ المفصولة</h5>
+              </div>
+              <div class="icon">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <a href="#" class="small-box-footer">التفاصيل <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+            <hr>
+
+      </div>
+    </div>
+    </section>
+
+<!--   end column number 2      -->
+   </div>
+<!--   end Row      -->
+
+              <div class="image" style="text-align:center">
+                                   {% load static %}
+                                  <img class="doc_image" src="{% static 'dist/img/about.jpeg' %}"  style="width:660px;">
+                        </div>
+    </div>
+
+<br><br><br><br><br><br>
+</div>
+
+ 
+
+
+<br><br>
+
+{% endblock %}
+
+  {% block javascript %}
+  {% endblock %}

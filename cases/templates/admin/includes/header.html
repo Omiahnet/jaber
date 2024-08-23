@@ -1,0 +1,120 @@
+<nav class="navbar navbar-expand-lg  navbar-dark  fixed-top" style="background-color: #444444;font-family:GE Dinkum;font-size:22px;">
+    <div class="container-fluid">
+        <!-- Brand/logo -->
+  
+      <a class="navbar-brand" href="#"  style="font-family:GE Dinkum;font-size:25px;font-weight: bold;color:#DB9437;">مجمع جبر لاعمال المحاماة</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav se-auto mb-2 mb-lg-0" >
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'cases:main' %}" style="font-family:GE Dinkum;font-size:22px;color:#DB9437;">الشاشة الرئيسة</a>
+          </li>
+  
+  
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle jaber_txt" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#DB9437;">
+              الموكلين
+            </a>
+            <ul class="dropdown-menu"  style="text-align:right;">
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:all_clients'%}">عرض كافة الموكلين</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:add_client'%}">اضافة موكل جديد</a></li>              
+              <li><a class="dropdown-item jaber_txt" href="#">ارشيف الموكلين</a></li>
+              
+            </ul>
+          </li>
+  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle jaber_txt" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#DB9437;">
+              المحامين
+            </a>
+            <ul class="dropdown-menu"  style="text-align:right;">
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:all_lawyers'%}">عرض بكافة المحامين</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:add_lawyer'%}">اضافة بيانات محامي</a></li>              
+              <li><a class="dropdown-item jaber_txt" href="#">الحسابات المالية للمحامي</a></li>
+
+              
+              
+            </ul>
+          </li>
+  
+  
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#DB9437;">
+                 القضايا
+  
+            </a>
+            <ul class="dropdown-menu"  style="text-align:right;">
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:all_cases' %}">كشف بكافة القضايا</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:add_case'%}">اضافة قضية جديدة</a></li>              
+              <li><a class="dropdown-item jaber_txt" href="#"> ارشيف القضايا</a></li>
+                
+              
+            </ul>
+          </li>
+  
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#DB9437;">
+                الجلسات
+  
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item jaber_txt" href="#">عرض كل الجلسات</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item jaber_txt" href="#">اضافة جلسة جديدة</a></li>
+              
+              
+            </ul>
+          </li>
+  
+  
+          
+  
+           <li class="nav-item dropdown" >
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#DB9437;">
+                  الادارة المالية
+            </a>
+            <ul class="dropdown-menu"   style="text-align:right;">
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:full_payments' %}">كشف بكافة المقبوضات</a></li>
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:full_expenses' %}">كشف بكافة المصروفات</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item jaber_txt" href="#">قبض معاملة مالية</a></li>
+              <li><a class="dropdown-item jaber_txt" href="#">صرف معاملة مالية</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item jaber_txt" href="#">المتابعة المالية للقضايا</a></li>
+              <li><a class="dropdown-item jaber_txt" href="#">كشوف الرواتب للعاملين</a></li>                               
+                <li><a class="dropdown-item jaber_txt" href="#">تفاصيل الوضع المالي</a></li>
+  
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link jaber_txt" aria-current="page" href="#" style="font-family:GE Dinkum;font-size:22px;color:white;">مسؤول النظام</a>
+          </li> 
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#DB9437;">
+                    مغادرة
+            </a>
+            <ul class="dropdown-menu"  style="text-align:right;">
+              <li><a class="dropdown-item jaber_txt" href="{% url 'cases:index' %}">مغادرة ادارة النظام</a></li>
+               
+              
+              
+              
+            </ul>
+          </li>
+  
+        </ul>
+  
+        <form class="d-flex" role="search" >
+          <input class="form-control me-2" type="search" placeholder="ابحث عن" aria-label="Search" style="color:#DB9437;">
+          <button class="btn btn-outline-success" type="submit">البحث</button>
+        </form>
+      </div>
+    </div>
+  </nav>

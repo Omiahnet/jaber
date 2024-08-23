@@ -1,0 +1,230 @@
+{% extends 'guest/includes/base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/clients.css' %}">
+  {% comment %} --------------------------- {% endcomment %}
+          <br> <br> <br>
+
+
+
+
+  <div class="container-fluid ">
+ 
+ 
+   
+          <div class="row p-3 bg-light">
+                <div class="container-fluid">
+
+   <div class="row p-3 bg-light">
+
+
+<!-- Main content -->
+<section class="content">
+      <div class="container-fluid">
+        
+            <div class="image" style="text-align:center">
+                  {% load static %}
+                 <img class="doc_image" src="{% static 'dist/img/about.jpeg' %}"  style="width:650px;">
+            </div>
+
+            <hr>
+            <div class="row p-2 bg-light">
+                  <p  class="head_txt ">خدماتنا</p>
+               <hr>
+
+       <!-- Small boxes (Stat box) -->
+       <div class="row">
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-dark">
+                <div class="inner">
+                  <h3 > </h3>
+  
+                  <h4 class="dash_board" style="color:#DB9437;font-size:22px">استشارات ودراسات</h4>
+                </div>
+                <div class="icon">
+                  <i class="fas  fa-user"></i>
+                </div>
+                <a href="#" class="small-box-footer"><span style="color:#DB9437">التفاصيل</span> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-dark">
+                <div class="inner">
+                  <h3> <sup style="font-size: 20px"> </sup></h3>
+  
+                 <h4 class="dash_board" style="color:#DB9437;font-size:22px">تنفيذ احكام</h4>
+                </div>
+                <div class="icon">
+                  <i class=" fas fa-gavel"></i>
+                </div>
+                <a href="#" class="small-box-footer"><span style="color:#DB9437">التفاصيل</span> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-dark ">
+                <div class="inner">
+                  <h3> </h3>
+  
+  
+                    <h5 class="dash_board" style="color:#DB9437;font-size:22px">مرافعات</h5>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-gavel"></i>
+                </div>
+                <a href="#" class="small-box-footer"><span style="color:#DB9437">التفاصيل</span> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-dark">
+                <div class="inner">
+                  <h3> </h3>
+  
+  
+                    <h5 class="dash_board" style="color:#DB9437;font-size:22px">عقود واتفاقيات</h5>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-file"></i>
+                </div>
+                <a href="#" class="small-box-footer"><span style="color:#DB9437">التفاصيل</span> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-dark " >
+                <div class="inner">
+                  <h3> </h3>
+  
+  
+                    <h5 class="dash_board" style="color:#DB9437;font-size:22px">شركات واستثمارات</h5>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-building"></i>
+                </div>
+                <a href="#" class="small-box-footer"><span style="color:#DB9437">التفاصيل</span> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-2 col-6">
+              <!-- small box -->
+              <div class="small-box bg-dark">
+                <div class="inner">
+                  <h3> </h3>
+  
+                    <h5 class="dash_board" style="color:#DB9437;font-size:22px">صلح وتحكيم</h5>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-folder-open"></i>
+                </div>
+                <a href="#" class="small-box-footer" ><span style="color:#DB9437">التفاصيل</span> <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+  
+              <hr>
+  
+
+              
+
+            <div class="container pe-5 ps-5">
+                  
+            </div>      
+
+            <div class="row p-2 bg-light">
+                  <p  class="head_txt ">عملائنا</p>
+               <hr>
+            
+
+               {% load static %}               
+                
+             <style>
+                  .doc_image {
+                        
+                              border: 1px solid #ddd;
+                              border-radius: 4px;
+                              padding: 5px;
+                              width: 150px;
+                               
+                              background-color: white;
+                              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                        }
+                  .doc_image:hover {
+                              box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+                            }
+                  
+             </style>       
+             <div class="container" style="text-align:center">
+                  <img class="doc_image" src="{% static 'dist/img/companies/2.jpg' %}"  style="width:150px;">   
+                  <img class="doc_image" src="{% static 'dist/img/companies/3.jpg' %}"  style="width:150px;">  
+                  <img class="doc_image" src="{% static 'dist/img/companies/4.jpg' %}"  style="width:150px;">  
+                  <img class="doc_image" src="{% static 'dist/img/companies/5.jpg' %}"  style="width:150px;">  
+                  <img class="doc_image" src="{% static 'dist/img/companies/6.jpg' %}"  style="width:150px;">  
+                   
+                  <img class="doc_image" src="{% static 'dist/img/companies/7.jpg' %}"  style="width:150px;">  
+                  <img class="doc_image" src="{% static 'dist/img/companies/8.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/9.jpg' %}"  style="width:150px;">  
+                  <img class="doc_image" src="{% static 'dist/img/companies/10.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/11.jpg' %}"  style="width:150px;">
+                  <br>
+                  <img class="doc_image" src="{% static 'dist/img/companies/12.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/13.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/14.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/15.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/16.jpg' %}"  style="width:150px;">
+                  
+                  <img class="doc_image" src="{% static 'dist/img/companies/17.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/18.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/19.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/20.jpg' %}"  style="width:150px;">
+                  <img class="doc_image" src="{% static 'dist/img/companies/21.jpg' %}"  style="width:150px;">
+             </div>
+
+             <hr>
+             <div class="row p-2 bg-light">
+              <p  class="head_txt ">رؤيتنا</p>
+           <hr>
+           
+           
+           
+           
+         
+
+           <div class="container" style="text-align:center">
+                  <img class="doc_image" src="{% static 'dist/img/ourvision.png' %}"  style="width:750px;">   
+                          
+          </div>    
+            
+
+        </div>
+      </div>
+      </section>
+  
+  <!--   end column number 2      -->
+     </div>
+  <!--   end Row      -->
+
+           
+     
+
+<br><br><br><br><br><br>
+</div>
+
+ 
+
+
+<br><br>
+
+{% endblock %}
+
+  {% block javascript %}
+  {% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'guest/includes/base.html' %}
+
+
+{% block content %}
+
+<br><br><br><br><br><br><br>
+  <div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+          <div class="row mb-4">  
+               <label for="username" class="form-label jaber_txt"  >اسم المستخدم</label>
+               <div class="col-sm-3">               
+                   <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp">
+                </div>                       
+          </div>
+
+          <div class="row mb-4">  
+            <label for="username" class="form-label jaber_txt"  >كلمة السر</label>
+            <div class="col-sm-3">               
+                <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp">
+             </div>                       
+         </div>
+
+         <div class="row mb-4">   
+            <div class="col-sm-3">      
+               <button type="submit" class="btn btn-primary">الدخول للنظام</button>
+            </div>
+        </div>    
+      </form>
+  </div>
+
+  <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
+
+{% endblock %}

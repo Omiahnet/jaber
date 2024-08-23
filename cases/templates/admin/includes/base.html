@@ -1,0 +1,223 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+        <link rel="stylesheet" href="{% static 'css/stylo.css' %}">
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--        ooooooooooooooooooooooooo-->
+<!--   Main for Ahmad-->
+    <!-- Theme style -->
+            <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
+    <!-- Font Awesome -->
+          <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
+          <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+  <!--        Bootstrap 4 RTL     -->
+  <!-- Custom style for RTL                       -->
+          <link rel="stylesheet" href="{% static 'dist/css/custom.css' %}">
+          <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<!--        ooooooooooooooooooooooooo-->
+
+
+
+
+        <style>
+            .dropdown-item {
+               font-family:GE Dinkum;font-size:20px;
+            }
+
+            .law_header {
+               font-family:GE Dinkum;font-size:22px;
+
+               color:#00453E;
+
+               text-align : center;
+            }
+
+              .dash_board {
+                         font-family:GE Dinkum;font-size:20px;
+              }
+                .dashy_board {
+                         font-family:GE Dinkum;font-size:16px;
+                         font-family:arial;font-size:20px;
+                         text-align: center;
+              }
+
+              .case_board {
+                         font-family:GE Dinkum;font-size:24px;color:black;
+              }
+
+             .calendar_txt {
+                  font-family:GE Dinkum;font-size:18px;
+                   color:black;
+              }
+
+              .form_label {
+                  font-family:GE Dinkum;font-size:17px;color:gray;}
+
+              .form_button {
+                  font-family:GE Dinkum;font-size:17px;
+                   color:whitek;
+              }
+
+
+                 .doc_image {
+                       border: 1px solid #ddd;
+                      border-radius: 4px;
+                      padding: 5px;
+                      width: 100px;
+                    }
+
+
+
+                    .doc_image : hover {
+                       box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+
+                    }
+
+              .my_table {
+               font-family:GE Dinkum;font-size:20px;
+            }
+
+            .amount_txt
+               {
+                    font-family:arial;font-size:16px;
+                }
+            .main_txt {
+               font-family:GE Dinkum;font-size:18px;
+               background-color:#EAEAEA;
+               color:black;
+                text-align : right;
+            }
+
+              .main_txt2 {
+               font-family:GE Dinkum;font-size:16px;
+            }
+
+           .my_text {
+               font-family:GE Dinkum;font-size:20px;
+            }
+
+         .aside_text {
+                     font-family:GE Dinkum;font-size:16px;
+            }
+
+          .jaber_txt {
+              font-family:GE Dinkum;font-size:22px;color:#DB9437;
+          }
+
+          .nojaber_txt {
+            font-family:GE Dinkum;font-size:22px;color:gray;
+          } 
+
+
+
+          .jaber1_txt {
+              font-family:GE Dinkum;font-size:20px;color:#DB9437;
+          }
+
+           .sidebar1_txt {
+                              font-family:GE Dinkum;font-size:20px;color:black; }
+
+           .sidebar2_txt {
+                              font-family:GE Dinkum;font-size:18px;color:#DB9437; }
+
+          .jaber2_txt {
+              font-family:GE Dinkum;font-size:20px;color:black;
+          }
+
+         .jaber3_txt {
+              font-family:GE Dinkum;font-size:18px;color:#444444;
+          }
+
+         .jaber_btn {
+              font-family:GE Dinkum;font-size:18px;color:white;
+          }
+
+        .hd_calandar {
+                    width:180px;height:60px;border-style: solid;
+        }
+
+        .bg_calendar {
+             width:180px;height:115px;background-color:#E2E3E5;border-style: solid;border-color: red;}
+
+        .header_details {
+             font-size:24px;font-family:GE Dinkum;
+             color:black;
+             background-color:#BFBFBF;
+             text-align:center;
+            }
+
+         .system_btn {
+                    background-color:#444444;font-size:18px;font-family:GE Dinkum; color:gray; }
+
+         .system_btn:hover {
+                    background-color:#444444;font-size:18px;font-family:GE Dinkum;color:#DB9437;}
+
+        .system3_btn {
+                        background-color:#198754;font-size:18px;font-family:GE Dinkum; color:white; }
+        
+        .system3_btn:hover {
+                            background-color:#146E45;font-size:18px;font-family:GE Dinkum; color:white; }                
+
+        .system2_btn {
+                        background-color:#444444;font-size:18px;font-family:GE Dinkum; color:gray; }
+    
+        .system2_btn:hover {
+                        background-color:#444444;font-size:18px;font-family:GE Dinkum;color:white;}
+
+
+         .amount_ty {
+                    background-color:#444444;font-size:23px;font-family:GE Dinkum;color:#DB9437;
+         }
+            
+          
+         .nav-link:hover {
+             background-color: #555;
+             color: #ddd;
+             border-radius: 4px;
+         } 
+
+        .dropdown-item:hover {
+            background-color: #555;
+             color: #DB9437;
+             border-radius: 4px;
+        } 
+
+        </style>
+
+
+
+
+    </head>
+    <body>
+
+        {% include "admin/includes/header.html" %}
+        {% block content %}
+
+        {% endblock %}
+        {% include "admin/includes/footer.html" %}
+
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/stylo.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/myscript.js' %}"></script>
+        <!-- AdminLTE App -->
+        <script type="text/javascript" src="{% static 'dist/js/adminlte.js' %}"></script>
+
+         <script type="text/javascript" src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+         {% block javascript %}
+          {% endblock %}
+
+
+    </body>
+</html>
